@@ -32,14 +32,11 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/community-library-management-system">
       <Routes>
-
-        {/* Login */}
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
 
-        {/* Dashboard */}
         <Route
           path="/dashboard"
           element={
@@ -49,7 +46,6 @@ function App() {
           }
         />
 
-        {/* Books */}
         <Route
           path="/books"
           element={
@@ -59,7 +55,6 @@ function App() {
           }
         />
 
-        {/* Transactions */}
         <Route
           path="/transactions"
           element={
@@ -69,7 +64,6 @@ function App() {
           }
         />
 
-        {/* Users - Admin Only */}
         <Route
           path="/users"
           element={
@@ -78,7 +72,6 @@ function App() {
             </AdminRoute>
           }
         />
-
       </Routes>
     </BrowserRouter>
   );
